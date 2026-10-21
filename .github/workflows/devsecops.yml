@@ -24,6 +24,7 @@ jobs:
       - name: Build and Test
         run: .\mvnw.cmd -B clean verify
 
+      
       - name: SonarQube Analysis
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -32,4 +33,4 @@ jobs:
           "-Dsonar.projectKey=devSecOps-workshop"
           "-Dsonar.projectName=DevSecOps-Workshop"
           "-Dsonar.host.url=http://localhost:9000"
-          "-Dsonar.token=$env:SONAR_TOKEN"
+
